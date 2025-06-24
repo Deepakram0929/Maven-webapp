@@ -3,23 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>For Sinchi 💖</title>
+  <title>She Said Yes! 💖</title>
   <style>
     body {
-      background: linear-gradient(to right, #ffafbd, #ffc3a0);
+      background: linear-gradient(to top right, #fbc2eb, #a6c1ee);
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       text-align: center;
       color: #fff;
       margin: 0;
       padding: 0;
+      overflow: hidden;
     }
 
     .container {
-      padding: 50px 20px;
+      padding: 60px 20px;
     }
 
     h1 {
-      font-size: 3rem;
+      font-size: 3.5rem;
       margin-bottom: 20px;
     }
 
@@ -30,45 +31,89 @@
     }
 
     .heart {
-      font-size: 5rem;
+      font-size: 6rem;
       animation: pulse 1s infinite;
     }
 
     @keyframes pulse {
-      0% { transform: scale(1); color: #ff5e78; }
-      50% { transform: scale(1.1); color: #ff1744; }
-      100% { transform: scale(1); color: #ff5e78; }
+      0% { transform: scale(1); color: #ff6ec4; }
+      50% { transform: scale(1.1); color: #d500f9; }
+      100% { transform: scale(1); color: #ff6ec4; }
     }
 
-    .button {
-      background-color: #ff4081;
-      border: none;
-      padding: 15px 30px;
-      color: white;
+    .confetti {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .signature {
+      margin-top: 40px;
       font-size: 1.2rem;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    .button:hover {
-      background-color: #f50057;
+      color: #fff;
+      opacity: 0.9;
     }
   </style>
 </head>
 <body>
+  <canvas class="confetti" id="confetti"></canvas>
   <div class="container">
-    <div class="heart">💖</div>
-    <h1>Dear Sinchi,</h1>
+    <div class="heart">💞</div>
+    <h1>She Said YES! 💍</h1>
     <p>
-      Every time I see you, my heart skips a beat.<br/>
-      Your smile lights up my world brighter than the sun.<br/><br/>
-      I don’t know how to say this perfectly, but…<br/>
-      I think I’ve fallen for you. ❤️<br/><br/>
-      Will you be the reason behind my smiles every day?<br/>
-      Will you be mine?
+      Thank you, Sinchi.<br/>
+      You’ve made me the happiest person in the world.<br/>
+      Our journey together starts now, and I can't wait to live every moment with you. 💖
     </p>
-    <button class="button" onclick="alert('Yay! Thank you Sinchi ❤️')">Yes, I will 💕</button>
+    <div class="signature">With love, <strong>Deepak 💫</strong></div>
   </div>
+
+  <script>
+    // Simple Confetti Animation 🎉
+    const canvas = document.getElementById('confetti');
+    const ctx = canvas.getContext('2d');
+    let pieces = [];
+    let numberOfPieces = 100;
+
+    function resize() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    window.addEventListener('resize', resize);
+    resize();
+
+    function createPiece() {
+      return {
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height - canvas.height,
+        size: Math.random() * 10 + 5,
+        speed: Math.random() * 3 + 2,
+        color: `hsl(${Math.random() * 360}, 100%, 60%)`
+      };
+    }
+
+    for (let i = 0; i < numberOfPieces; i++) {
+      pieces.push(createPiece());
+    }
+
+    function update() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let piece of pieces) {
+        piece.y += piece.speed;
+        if (piece.y > canvas.height) {
+          Object.assign(piece, createPiece());
+          piece.y = -piece.size;
+        }
+        ctx.fillStyle = piece.color;
+        ctx.fillRect(piece.x, piece.y, piece.size, piece.size);
+      }
+      requestAnimationFrame(update);
+    }
+
+    update();
+  </script>
 </body>
 </html>
