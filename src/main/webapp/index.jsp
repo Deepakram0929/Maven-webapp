@@ -3,99 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My Portfolio</title>
-
+  <title>Profile Card</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f0f4f8;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #89f7fe, #66a6ff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      border: 4px solid #66a6ff;
+    }
+
+    .card h2 {
+      margin: 10px 0 5px;
       color: #333;
     }
 
-    .container {
-      max-width: 800px;
-      margin: auto;
-      padding: 20px;
-      background: #fff;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
+    .card p {
+      margin: 5px 0 20px;
+      color: #777;
     }
 
-    header {
-      text-align: center;
-      padding-bottom: 20px;
-      border-bottom: 1px solid #ddd;
-    }
-
-    header h1 {
-      margin: 0;
-      color: #007acc;
-    }
-
-    .about, .projects, .contact {
-      margin: 20px 0;
-    }
-
-    h2 {
-      color: #005f8c;
-    }
-
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    ul li {
-      background: #e0f0ff;
-      margin: 5px 0;
-      padding: 10px;
-      border-radius: 5px;
-    }
-
-    a {
-      color: #007acc;
+    .btn {
+      display: inline-block;
+      background: #66a6ff;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 25px;
       text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
     }
 
-    footer {
-      text-align: center;
-      margin-top: 30px;
-      font-size: 14px;
-      color: #666;
+    .btn:hover {
+      background: #558de8;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Deepak DR</h1>
-      <p>Web Developer | Student | Tech Enthusiast</p>
-    </header>
 
-    <section class="about">
-      <h2>About Me</h2>
-      <p>I’m a passionate web developer with experience in HTML, CSS, JavaScript, and the MERN stack. I love building interactive and modern web applications.</p>
-    </section>
-
-    <section class="projects">
-      <h2>Projects</h2>
-      <ul>
-        <li>💬 Group Chat App (MERN)</li>
-        <li>🛍️ E-Commerce Java App</li>
-        <li>🌾 Crop Pattern Prediction</li>
-      </ul>
-    </section>
-
-    <section class="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:deepak@example.com">deepak@example.com</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/deepak">linkedin.com/in/deepak</a></p>
-    </section>
-
-    <footer>
-      <p>&copy; 2025 Deepak DR. All rights reserved.</p>
-    </footer>
+  <div class="card">
+    <img src="https://i.imgur.com/2DhmtJ4.jpg" alt="Profile Image">
+    <h2>Deepak DR</h2>
+    <p>Web Developer & Cloud Learner</p>
+    <a href="mailto:deepak@example.com" class="btn">Contact Me</a>
   </div>
+
 </body>
 </html>
