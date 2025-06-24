@@ -1,97 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Deepak ❤️ Sinchi - Wedding Invitation</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Portfolio</title>
+
   <style>
     body {
       margin: 0;
-      font-family: 'Georgia', serif;
-      background: linear-gradient(to bottom right, #fbeaff, #d6e0f0);
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
       color: #333;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
     }
 
-    .card {
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
       background: #fff;
-      padding: 40px;
-      border-radius: 20px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    header {
       text-align: center;
-      max-width: 700px;
-      width: 90%;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #ddd;
     }
 
-    h1 {
-      font-family: 'Cursive', sans-serif;
-      font-size: 3rem;
-      color: #c2185b;
-      margin-bottom: 10px;
+    header h1 {
+      margin: 0;
+      color: #007acc;
     }
 
-    .flower {
-      font-size: 2rem;
-      margin-bottom: 15px;
+    .about, .projects, .contact {
+      margin: 20px 0;
     }
 
-    .names {
-      font-size: 2rem;
-      color: #8e24aa;
-      margin: 10px 0;
-      font-weight: bold;
+    h2 {
+      color: #005f8c;
     }
 
-    .message {
-      font-size: 1.2rem;
-      line-height: 1.6;
-      color: #555;
-      margin: 30px 0;
+    ul {
+      list-style-type: none;
+      padding: 0;
     }
 
-    .date-box {
-      margin: 30px 0;
-      font-size: 1.4rem;
-      color: #d81b60;
+    ul li {
+      background: #e0f0ff;
+      margin: 5px 0;
+      padding: 10px;
+      border-radius: 5px;
     }
 
-    .footer {
-      font-style: italic;
-      color: #777;
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
       margin-top: 30px;
-    }
-
-    .heart {
-      font-size: 2.5rem;
-      animation: beat 1s infinite;
-      display: inline-block;
-    }
-
-    @keyframes beat {
-      0%, 100% { transform: scale(1); color: #f06292; }
-      50% { transform: scale(1.2); color: #e91e63; }
+      font-size: 14px;
+      color: #666;
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <div class="flower">💐💖🌸</div>
-    <h1>Wedding Invitation</h1>
-    <div class="names">Deepak ❤️ Sinchi</div>
-    <div class="message">
-      My dearest <strong>Sinchi</strong>,<br><br>
-      Now that you’ve said <em>yes</em>, my heart is full... 💞<br><br>
-      I can’t wait to begin our forever together.<br><br>
-      Will you do the honors and choose a special date<br>
-      to make our love official and eternal? 💍<br><br>
-      <span class="heart">💖</span><br>
-      Just say the date, and I’ll make sure it becomes<br>
-      the most beautiful day of our lives.
-    </div>
-    <div class="date-box">Waiting for you to pick the perfect date... 🗓️</div>
-    <div class="footer">With endless love, Deepak 🌟</div>
+  <div class="container">
+    <header>
+      <h1>Deepak DR</h1>
+      <p>Web Developer | Student | Tech Enthusiast</p>
+    </header>
+
+    <section class="about">
+      <h2>About Me</h2>
+      <p>I’m a passionate web developer with experience in HTML, CSS, JavaScript, and the MERN stack. I love building interactive and modern web applications.</p>
+    </section>
+
+    <section class="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li>💬 Group Chat App (MERN)</li>
+        <li>🛍️ E-Commerce Java App</li>
+        <li>🌾 Crop Pattern Prediction</li>
+      </ul>
+    </section>
+
+    <section class="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:deepak@example.com">deepak@example.com</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/deepak">linkedin.com/in/deepak</a></p>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Deepak DR. All rights reserved.</p>
+    </footer>
   </div>
 </body>
 </html>
