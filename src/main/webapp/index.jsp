@@ -63,7 +63,7 @@
   <div class="card">
     <img src="https://i.imgur.com/2DhmtJ4.jpg" alt="Profile Image">
     <h2>Deepak DR</h2>
-    <p>Web Developer & Cloud Learner</p>
+    <p>Full Stack Developer & AWS Devops Engineer </p>
     <a href="mailto:deepak@example.com" class="btn">Contact Me</a>
   </div>
 
