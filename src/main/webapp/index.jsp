@@ -64,7 +64,7 @@
     <img src="https://i.imgur.com/2DhmtJ4.jpg" alt="Profile Image">
     <h2>Welcome to training institute</h2>
     <p>Full Stack Developer & AWS Devops Engineer </p>
-    <a href="mailto:deepak@example.com" class="btn">Contact Me</a>
+    <a href="mailto:deepakram@gmail.com" class="btn">Contact Me</a>
   </div>
 
 </body>
