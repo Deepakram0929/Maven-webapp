@@ -1,119 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>She Said Yes! 💖</title>
+  <meta charset="UTF-8">
+  <title>Wedding Invitation - Deepak & Sinchi</title>
   <style>
     body {
-      background: linear-gradient(to top right, #fbc2eb, #a6c1ee);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      text-align: center;
-      color: #fff;
       margin: 0;
-      padding: 0;
-      overflow: hidden;
+      font-family: 'Georgia', serif;
+      background: linear-gradient(to bottom right, #fff1eb, #ace0f9);
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
 
-    .container {
-      padding: 60px 20px;
-    }
-
-    h1 {
-      font-size: 3.5rem;
-      margin-bottom: 20px;
-    }
-
-    p {
-      font-size: 1.5rem;
+    .card {
+      background: #ffffff;
+      padding: 40px;
       max-width: 700px;
-      margin: 0 auto 30px auto;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+      text-align: center;
     }
 
-    .heart {
-      font-size: 6rem;
-      animation: pulse 1s infinite;
+    .card h1 {
+      font-family: 'Cursive', sans-serif;
+      font-size: 3rem;
+      color: #c2185b;
+      margin-bottom: 0.5em;
     }
 
-    @keyframes pulse {
-      0% { transform: scale(1); color: #ff6ec4; }
-      50% { transform: scale(1.1); color: #d500f9; }
-      100% { transform: scale(1); color: #ff6ec4; }
-    }
-
-    .confetti {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 1;
-    }
-
-    .signature {
-      margin-top: 40px;
+    .card p {
       font-size: 1.2rem;
-      color: #fff;
-      opacity: 0.9;
+      margin: 1em 0;
+      line-height: 1.6;
+    }
+
+    .names {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #8e24aa;
+    }
+
+    .date {
+      font-size: 1.5rem;
+      color: #d81b60;
+      margin: 1em 0;
+    }
+
+    .footer {
+      margin-top: 2em;
+      font-style: italic;
+      color: #555;
+    }
+
+    .flower {
+      font-size: 2rem;
+      margin-bottom: 1em;
     }
   </style>
 </head>
 <body>
-  <canvas class="confetti" id="confetti"></canvas>
-  <div class="container">
-    <div class="heart">💞</div>
-    <h1>She Said YES! 💍</h1>
+  <div class="card">
+    <div class="flower">💐💍🎉</div>
+    <h1>Wedding Invitation</h1>
+    <p>We are delighted to invite you to the wedding of</p>
+    <div class="names">Deepak ❤️ Sinchi</div>
+    <p class="date">On [Your Wedding Date Here]<br>at [Venue/Location]</p>
     <p>
-      Thank you, Sinchi.<br/>
-      You’ve made me the happiest person in the world.<br/>
-      Our journey together starts now, and I can't wait to live every moment with you. 💖
+      Join us as we begin a beautiful journey together<br>
+      with love, laughter, and lifelong memories.
     </p>
-    <div class="signature">With love, <strong>Deepak 💫</strong></div>
+    <p class="footer">Your presence will make our day truly special.</p>
   </div>
-
-  <script>
-    // Simple Confetti Animation 🎉
-    const canvas = document.getElementById('confetti');
-    const ctx = canvas.getContext('2d');
-    let pieces = [];
-    let numberOfPieces = 100;
-
-    function resize() {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    }
-
-    window.addEventListener('resize', resize);
-    resize();
-
-    function createPiece() {
-      return {
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height - canvas.height,
-        size: Math.random() * 10 + 5,
-        speed: Math.random() * 3 + 2,
-        color: `hsl(${Math.random() * 360}, 100%, 60%)`
-      };
-    }
-
-    for (let i = 0; i < numberOfPieces; i++) {
-      pieces.push(createPiece());
-    }
-
-    function update() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      for (let piece of pieces) {
-        piece.y += piece.speed;
-        if (piece.y > canvas.height) {
-          Object.assign(piece, createPiece());
-          piece.y = -piece.size;
-        }
-        ctx.fillStyle = piece.color;
-        ctx.fillRect(piece.x, piece.y, piece.size, piece.size);
-      }
-      requestAnimationFrame(update);
-    }
-
-    update();
-  </script>
 </body>
 </html>
